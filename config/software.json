@@ -1,0 +1,196 @@
+{
+  "brew_packages": [
+    {
+      "name": "git",
+      "description": "Version control system"
+    },
+    {
+      "name": "git-lfs",
+      "description": "Git Large File Storage"
+    },
+    {
+      "name": "yarn",
+      "description": "JavaScript package manager"
+    },
+    {
+      "name": "gitui",
+      "description": "Blazing fast terminal-ui for git"
+    },
+    {
+      "name": "zsh",
+      "description": "Z shell"
+    },
+    {
+      "name": "make",
+      "description": "Build automation tool"
+    },
+    {
+      "name": "gcc",
+      "description": "GNU Compiler Collection"
+    },
+    {
+      "name": "cmake",
+      "description": "Cross-platform build system"
+    },
+    {
+      "name": "autoconf",
+      "description": "Automatic configure script builder"
+    },
+    {
+      "name": "automake",
+      "description": "Tool for automatically generating Makefile.in files"
+    },
+    {
+      "name": "libtool",
+      "description": "Generic library support script"
+    },
+    {
+      "name": "pkg-config",
+      "description": "Helper tool for compiling applications and libraries"
+    },
+    {
+      "name": "visual-studio-code",
+      "description": "Code editor",
+      "type": "cask"
+    },
+    {
+      "name": "google-chrome",
+      "description": "Web browser",
+      "type": "cask"
+    },
+    {
+      "name": "firefox",
+      "description": "Web browser",
+      "type": "cask"
+    },
+    {
+      "name": "insomnia",
+      "description": "API testing tool",
+      "type": "cask"
+    },
+    {
+      "name": "slack",
+      "description": "Communication platform",
+      "type": "cask"
+    },
+    {
+      "name": "iterm2",
+      "description": "Terminal emulator",
+      "type": "cask"
+    },
+    {
+      "name": "jordanbaird-ice",
+      "description": "Menu bar manager",
+      "type": "cask"
+    },
+    {
+      "name": "maccy",
+      "description": "Clipboard manager",
+      "type": "cask"
+    },
+    {
+      "name": "rectangle",
+      "description": "Window management utility",
+      "type": "cask"
+    },
+    {
+      "name": "wget",
+      "description": "Network downloader"
+    },
+    {
+      "name": "curl",
+      "description": "Command line tool for data transfer"
+    },
+    {
+      "name": "jq",
+      "description": "Command-line JSON processor"
+    },
+    {
+      "name": "htop",
+      "description": "Interactive process viewer"
+    },
+    {
+      "name": "ruby",
+      "description": "Ruby programming language"
+    }
+  ],
+  "npm_packages": [
+    {
+      "name": "ember-cli",
+      "description": "Ember.js command line interface",
+      "global": true
+    },
+    {
+      "name": "@ember/optional-features",
+      "description": "Ember optional features",
+      "global": true
+    },
+    {
+      "name": "typescript",
+      "description": "TypeScript compiler",
+      "global": true
+    },
+    {
+      "name": "eslint",
+      "description": "JavaScript linter",
+      "global": true
+    },
+    {
+      "name": "prettier",
+      "description": "Code formatter",
+      "global": true
+    },
+    {
+      "name": "bower",
+      "description": "Package manager (needed for older Ember projects)",
+      "global": true
+    }
+  ],
+  "additional_tools": [
+    {
+      "name": "oh-my-zsh",
+      "description": "Zsh configuration framework",
+      "install_command": "sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended"
+    },
+    {
+      "name": "nvm",
+      "description": "Node Version Manager",
+      "install_command": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash"
+    },
+    {
+      "name": "node-20",
+      "description": "Node.js version 20 (via NVM)",
+      "install_command": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm install 20 && nvm use 20"
+    },
+    {
+      "name": "node-10",
+      "description": "Node.js version 10 (via NVM)",
+      "install_command": "export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && nvm install 10"
+    },
+    {
+      "name": "powerline-fonts",
+      "description": "Powerline fonts for terminal",
+      "install_command": "git clone https://github.com/powerline/fonts.git /tmp/powerline-fonts && cd /tmp/powerline-fonts && ./install.sh && rm -rf /tmp/powerline-fonts"
+    },
+    {
+      "name": "nerd-fonts",
+      "description": "Nerd Fonts collection",
+      "install_command": "brew install --cask font-meslo-lg-nerd-font font-fira-code-nerd-font font-hack-nerd-font"
+    },
+    {
+      "name": "powerlevel10k",
+      "description": "Powerlevel10k theme for Zsh",
+      "install_command": "git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+    },
+    {
+      "name": "zsh-plugins",
+      "description": "Essential Zsh plugins",
+      "install_command": "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting"
+    },
+    {
+      "name": "configure-zsh",
+      "description": "Configure .zshrc with plugins and theme",
+      "install_command": "cp ~/.zshrc ~/.zshrc.backup && sed -i '' 's/ZSH_THEME=\"robbyrussell\"/ZSH_THEME=\"powerlevel10k\\/powerlevel10k\"/' ~/.zshrc && sed -i '' 's/plugins=(git)/plugins=(git node npm yarn ember-cli brew macos zsh-autosuggestions zsh-syntax-highlighting colored-man-pages extract z)/' ~/.zshrc"
+    }
+  ]
+}
